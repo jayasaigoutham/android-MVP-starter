@@ -20,6 +20,8 @@ import android.widget.TextView;
 
 import com.jayasai.starter.Home.MainActivity;
 import com.jayasai.starter.R;
+import com.jayasai.starter.sqlite.Helper.SqliteController;
+import com.jayasai.starter.sqlite.model.User;
 
 
 public class LoginActivity extends AppCompatActivity implements LoginView{
@@ -34,6 +36,8 @@ public class LoginActivity extends AppCompatActivity implements LoginView{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        SqliteController sqliteController = new SqliteController(this);
 
         presenter = new LoginPresenter(this, new LoginInteractor()); //Future enhancement : Dagger2 can be used for DI
 
