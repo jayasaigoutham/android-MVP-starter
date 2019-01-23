@@ -1,6 +1,8 @@
 package com.jayasai.starter.Login;
 
-public class LoginPresenter implements LoginInteractor.OnLoginFinishedListener {
+import com.jayasai.starter.Base.BasePresenter;
+
+public class LoginPresenter extends BasePresenter implements LoginInteractor.OnLoginFinishedListener {
 
     private LoginView loginView;
     private LoginInteractor loginInteractor;

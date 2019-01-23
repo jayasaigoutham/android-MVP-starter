@@ -3,8 +3,10 @@ package com.jayasai.starter.Login;
 import android.os.AsyncTask;
 import android.text.TextUtils;
 
+import com.jayasai.starter.Base.BaseInteractor;
 
-public class LoginInteractor {
+
+public class LoginInteractor extends BaseInteractor {
 
     interface OnLoginFinishedListener {
         void ifSuccess();
